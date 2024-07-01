@@ -54,16 +54,19 @@ function gradeQuiz(candidateAnswers) {
       }
   
     }
-
+console.log(' ');
 
   grade = ((numberOfCorrectAnswers) / (questions.length)) * 100;
 
   console.log(`Candidate Name: ${candidateName}`)
+
   for(let i = 0; i < questions.length; i++) {
-    console.log(questions[i]);
+    console.log(`${[i+1]}) ${questions[i]}`);
     console.log(`Your Answer: ${candidateAnswers[i]}`);
     console.log(`Correct Answer: ${correctAnswers[i]}`);
+    console.log(' ');
   }
+  
 
   console.log(`>>> Overall Grade: ${grade}% (${numberOfCorrectAnswers} of ${questions.length} responses are correct) <<<`)
   if (grade < 80)
